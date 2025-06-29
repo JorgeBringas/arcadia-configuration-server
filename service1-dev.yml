@@ -1,4 +1,28 @@
 server:
     port: 9090
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8065/eureka/
+info:
+  app:
+    name: Service1 Microservice
+    description: App to test microservices
+    version: 1.0.0
+management:
+  info:
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+      access: unrestricted
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 service1:
     message: Hello from service1
