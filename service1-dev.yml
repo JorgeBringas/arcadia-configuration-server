@@ -1,2 +1,4 @@
+server:
+    port: 9090
 service1:
     message: Hello from service1
