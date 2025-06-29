@@ -8,3 +8,20 @@ eureka:
         fetchRegistry: true
         serviceUrl:
             defaultZone: http://localhost:8065/eureka
+info:
+  app:
+    name: Gateway server
+    description: gateway server
+    version: 1.0.0
+
+management:
+    info:
+        env:
+            enabled: true
+    endpoint:
+        gateway:
+            access: unrestricted
+    endpoints:
+        web:
+            exposure:
+                include: '*'
